@@ -1,0 +1,35 @@
+{
+  "// EXAMPLE": "Copy relevant sections into your project's .claude/settings.json or .claude/settings.local.json",
+
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Bash(git commit)",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '--- Reminder: if this commit used AI assistance, ensure it has an Assisted-by: trailer. Run /project:commit-assisted for help. ---'"
+          }
+        ]
+      }
+    ]
+  },
+
+  "permissions": {
+    "// NOTE": "These are examples. Adjust to your project's needs and your trust level.",
+    "allow": [
+      "Bash(git diff*)",
+      "Bash(git log*)",
+      "Bash(git status*)",
+      "Bash(git show*)",
+      "Read",
+      "Glob",
+      "Grep"
+    ],
+    "deny": [
+      "Bash(git commit*--no-verify*)",
+      "Bash(git push*--force*)",
+      "Bash(git reset*--hard*)"
+    ]
+  }
+}

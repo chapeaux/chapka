@@ -1,0 +1,31 @@
+---
+description: OSS accountability, verification, and communication norms for AI-assisted work
+alwaysApply: true
+---
+
+# Open source + AI — core behavior
+
+## Verification and quality
+
+- **Own every line** you ship. Read, run, and understand changes before opening a PR; do not submit untested or unreviewed-by-you output.
+- **Verify claims** about this codebase against source, tests, and official docs — models are often wrong about project specifics.
+- **Split work into logical commits** with clear messages; avoid one opaque bulk change unless the project explicitly wants it.
+
+## Attribution and authorship
+
+- Do **not** add `Co-authored-by:` for tools, models, or bots. Humans are accountable; AI is not an author.
+- Prefer **human-written** PR descriptions and issue comments: focus on **why** and decisions, not a narration of the diff.
+
+## Community boundaries
+
+- Do **not** draft **review comments** on others’ PRs/issues as raw LLM paste; write your own assessment.
+- Where policies are strict (e.g. some projects): no AI-generated messages in development chat; keep communication succinct and substantive.
+- Avoid drive-by mass changes, unrelated refactors, or spam patterns (bulk low-value PRs, karma-style comments).
+
+## Review responses
+
+- Answer maintainer feedback from **your understanding**. If you revise code, explain the reasoning; do not only re-prompt and resubmit.
+
+## Upstream first
+
+- When contributing to **another** repository, follow **that** project’s `CONTRIBUTING`, license, and AI policy; Chapka defaults are a floor, not a override.
